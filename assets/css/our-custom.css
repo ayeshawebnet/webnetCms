@@ -893,3 +893,11 @@ nav.open + .hamburger .hamburger-inner:after {
 .geo-mt .geo-map{
   flex: 0 0 48%;
 }
+
+
+/* Cms Table section */
+.cms-table {
+  /* border: 1px solid gray; */
+  /* display: flex;
+  align-items: center; */
+}
