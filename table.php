@@ -68,7 +68,7 @@
 
                                             <!-- <h4 class="card-title"><b>Table Lists</b></h4> -->
                                             <!-- Cms Table section -->
-                                            <table class="cms-table table-striped">
+                                            <table class="cms-table zebra-stripe">
                                                 <thead>
                                                     <tr>
                                                         <th>
@@ -92,7 +92,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="ellipsis">Website Packages</td>
-                                                        <td >Website Packages</td>
+                                                        <td>Website Packages</td>
                                                         <td>-</td>
                                                         <td class="text-center">2022-01-25 17:36:35</td>
                                                         <td class="tbl-action-col">
@@ -112,7 +112,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="ellipsis">Free Ecommerce Website Deliverables</td>
-                                                        <td >Free Ecommerce Website Deliverables</td>
+                                                        <td>Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
                                                         <td class="text-center">2021-09-15 12:08:34</td>
                                                         <td class="tbl-action-col">
@@ -131,7 +131,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="ellipsis">Free Ecommerce Website Deliverables</td>
-                                                        <td >Free Ecommerce Website Deliverables</td>
+                                                        <td>Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
                                                         <td class="text-center">2021-09-15 12:08:34</td>
                                                         <td class="tbl-action-col">
@@ -150,7 +150,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="ellipsis">Free Ecommerce Website Deliverables Free Ecommerce Website Deliverables</td>
-                                                        <td >Free Ecommerce Website Deliverables Free Ecommerce Website Deliverables</td>
+                                                        <td>Free Ecommerce Website Deliverables Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
                                                         <td class="text-center">2021-09-15 12:08:34</td>
                                                         <td class="tbl-action-col">
@@ -415,7 +415,7 @@
                 // }
 
                 if ($(this).is(':checked')) {
-                    if (!$(this).closest('tr').find('th').length) {
+                    if (!$(this).closest('tr').find('th').length) { //if not header checkbox
                         $(this).closest('tr').addClass('selected-tr');
                     }
                 } else {
@@ -459,6 +459,17 @@
             //starts - set-style-on-hover on tr
 
 
+           
+            function addZebraStripes() {
+                
+                if ($('.cms-table').hasClass('zebra-stripe')) {
+                    $('.cms-table tbody tr:nth-child(odd)').addClass("zebrastripe");
+                }
+                else{
+                    $('.cms-table tbody tr:nth-child(odd)').removeClass("zebrastripe");
+                }
+            }
+        
 
             //   Save the full text initially
             $('.ellipsis').each(function() {
@@ -466,9 +477,10 @@
                 $(this).data('full-text', fullText);
             });
 
+            
             // Apply ellipsis on page load
             applyEllipsis();
-
+            addZebraStripes();
 
         });
     </script>

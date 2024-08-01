@@ -887,6 +887,7 @@ nav.open + .hamburger .hamburger-inner:after {
 
 /* Cms Table section */
 .cms-table {
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
 }
 .cms-table,
@@ -906,14 +907,15 @@ nav.open + .hamburger .hamburger-inner:after {
 .ellipsis-tooltip {
   position: absolute;
   background-color: #333;
-  opacity: 0.8;
-  color: #fff;
-  padding: 5px;
+  opacity: 0.6;
+  color: #ececec;
+  padding:3px 5px;
   border-radius: 5px;
   z-index: 1000;
   white-space: nowrap;
   left: 9%;
   margin-top: 6px;
+  font-size: smaller;
 }
 
 .set-style-on-hover{
@@ -959,5 +961,9 @@ nav.open + .hamburger .hamburger-inner:after {
   align-items: center;
 }
 .selected-tr{
-  background-color: #ededed;
+  background-color: #ededed !important;
 }
+
+.zebrastripe { 
+  background-color: #f7f7f7; 
+} 
