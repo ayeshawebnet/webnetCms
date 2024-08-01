@@ -629,23 +629,8 @@ body[data-sidebar="dark"] .mm-active > a {
   background-color: #fff !important;
   color: #000;
 }
-.Edit-btn-1 {
-  display: flex;
-  align-items: center;
-}
-.Edit-btn-1 a {
-}
-.Edit-btn-1 a i {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  font-size: 14px;
-  justify-content: center;
-  color: #fff;
-  border-radius: 4px;
-  align-items: center;
-  margin-right: 10px;
-}
+
+
 
 /* End css By Hammad */
 
@@ -907,8 +892,9 @@ nav.open + .hamburger .hamburger-inner:after {
 .cms-table,
 .cms-table th,
 .cms-table td {
-  border: 1px solid rgb(173, 173, 173) !important;
-  padding: 10px;
+  border-bottom: 1px solid rgb(201, 201, 201) !important;
+  padding: 15px;
+
 }
 
 .tbl-checkbox-container {
@@ -928,4 +914,50 @@ nav.open + .hamburger .hamburger-inner:after {
   white-space: nowrap;
   left: 9%;
   margin-top: 6px;
+}
+
+.set-style-on-hover{
+  /* background-color: #dedede; */
+  border: 1px solid #c9c9c9;
+  box-shadow: 2px 3px 3px  rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.tbl-action-btn{
+  display: flex ;
+  justify-content: space-around;
+
+}
+.tbl-action-col{ 
+  width: 180px;
+}
+/* .Edit-btn-1 {
+  display: flex;
+  align-items: center;
+}
+.Edit-btn-1 a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  color: #fff;
+  border-radius: 4px;
+  align-items: center;
+  margin-right: 10px;
+} */
+
+.tbl-action-col a i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  color: #5b626b;
+  border-radius: 4px;
+  align-items: center;
+}
+.selected-tr{
+  background-color: #ededed;
 }

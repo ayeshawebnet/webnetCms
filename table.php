@@ -66,9 +66,9 @@
                                     <div class="card">
                                         <div class="card-body">
 
-                                            <h4 class="card-title"><b>Table Lists</b></h4>
+                                            <!-- <h4 class="card-title"><b>Table Lists</b></h4> -->
                                             <!-- Cms Table section -->
-                                            <table class="cms-table">
+                                            <table class="cms-table table-striped">
                                                 <thead>
                                                     <tr>
                                                         <th>
@@ -77,12 +77,14 @@
                                                             </div>
                                                         </th>
                                                         <th>Name</th>
+                                                        <th>Name</th>
                                                         <th>Unit</th>
-                                                        <th>Created At</th>
-                                                        <th>Action</th>
+                                                        <th class="text-center">Created At</th>
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+
                                                     <tr>
                                                         <td>
                                                             <div class="tbl-checkbox-container">
@@ -90,16 +92,17 @@
                                                             </div>
                                                         </td>
                                                         <td class="ellipsis">Website Packages</td>
+                                                        <td >Website Packages</td>
                                                         <td>-</td>
-                                                        <td>2022-01-25 17:36:35</td>
-                                                        <td>
-                                                            <div class="Edit-btn-1">
-                                                                <a href="#"><i class="ti-pencil-alt bg-902889"></i></a>
-                                                                <a href="#"><i class="ti-trash bg-f5a31d"></i></a>
-                                                                <a href="#"><i class="ti-files bg-c91974"></i></a>
+                                                        <td class="text-center">2022-01-25 17:36:35</td>
+                                                        <td class="tbl-action-col">
+                                                            <div class="tbl-action-btn d-none">
+                                                                <a href="#"><i class="ti-pencil-alt "></i></a>
+                                                                <a href="#"><i class="ti-trash "></i></a>
+                                                                <a href="#"><i class="ti-files "></i></a>
                                                             </div>
                                                         </td>
-                                                        <div>ere</div>
+
                                                     </tr>
 
                                                     <tr>
@@ -109,13 +112,52 @@
                                                             </div>
                                                         </td>
                                                         <td class="ellipsis">Free Ecommerce Website Deliverables</td>
+                                                        <td >Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
-                                                        <td>2021-09-15 12:08:34</td>
+                                                        <td class="text-center">2021-09-15 12:08:34</td>
+                                                        <td class="tbl-action-col">
+                                                            <div class="tbl-action-btn">
+                                                                <a href="#"><i class="ti-pencil-alt bg-none"></i></a>
+                                                                <a href="#"><i class="ti-trash "></i></a>
+                                                                <a href="#"><i class="ti-files "></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
                                                         <td>
-                                                            <div class="Edit-btn-1">
-                                                                <a href="#"><i class="ti-pencil-alt bg-902889"></i></a>
-                                                                <a href="#"><i class="ti-trash bg-f5a31d"></i></a>
-                                                                <a href="#"><i class="ti-files bg-c91974"></i></a>
+                                                            <div class="tbl-checkbox-container">
+                                                                <input class="form-check-input" type="checkbox" id="checkbox2">
+                                                            </div>
+                                                        </td>
+                                                        <td class="ellipsis">Free Ecommerce Website Deliverables</td>
+                                                        <td >Free Ecommerce Website Deliverables</td>
+                                                        <td>-</td>
+                                                        <td class="text-center">2021-09-15 12:08:34</td>
+                                                        <td class="tbl-action-col">
+                                                            <div class="tbl-action-btn">
+                                                                <a href="#"><i class="ti-pencil-alt bg-none"></i></a>
+                                                                <a href="#"><i class="ti-trash "></i></a>
+                                                                <a href="#"><i class="ti-files "></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="tbl-checkbox-container">
+                                                                <input class="form-check-input" type="checkbox" id="checkbox2">
+                                                            </div>
+                                                        </td>
+                                                        <td class="ellipsis">Free Ecommerce Website Deliverables Free Ecommerce Website Deliverables</td>
+                                                        <td >Free Ecommerce Website Deliverables Free Ecommerce Website Deliverables</td>
+                                                        <td>-</td>
+                                                        <td class="text-center">2021-09-15 12:08:34</td>
+                                                        <td class="tbl-action-col">
+                                                            <div class="tbl-action-btn">
+                                                                <a href="#"><i class="ti-pencil-alt bg-none"></i></a>
+                                                                <a href="#"><i class="ti-trash "></i></a>
+                                                                <a href="#"><i class="ti-files "></i></a>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -334,21 +376,91 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        //starts - ellipsis functionality 
         $(document).ready(function() {
+            //starts - ellipsis functionality 
             function applyEllipsis() {
-                console.log("this1", $(this));
-                //ellipses for width less than 786px
-                if ($(window).width() <= 786) {
-                    $('.ellipsis').each(function() {
-                        var text = $(this).text();
-                        var truncatedText = text.split("").slice(0, 12).join("") + '...';
+                var fullText = $(this).text();
+                $('.ellipsis').each(function() {
+                    var text = $(this).text();
+                    console.log("textsize", text.length);
+                    if (text.length > 30) {
+                        var truncatedText = text.split("").slice(0, 30).join("") + '...';
                         $(this).text(truncatedText);
-                    });
-                }
+                    }
+                });
             }
+            //ends - ellipsis functionality
 
-            // Save the full text initially
+            //starts - select multiple checkbox functionality
+            $('#main-checkbox').click(function() {
+                if ($(this).is(':checked')) {
+                    $('.form-check-input').prop('checked', true);
+                    $('.cms-table tbody tr').addClass('selected-tr');
+                } else {
+                    $('.form-check-input').prop('checked', false);
+                    $('.cms-table tbody tr').removeClass('selected-tr');
+
+
+                }
+            });
+            //ends - select multiple checkbox functionality
+
+            //starts - add bg color on single checkbox checked
+            $('tbody .form-check-input').click(function() {
+                // if all checkboxes lies under in tbody are checked, then check thead checkbox
+                // if ($('.form-check-input:checked').length === $('.form-check-input').length-1) {
+                //     $('#main-checkbox').prop('checked', true);
+                // } else {
+                //     $('#main-checkbox').prop('checked', false);
+                // }
+
+                if ($(this).is(':checked')) {
+                    if (!$(this).closest('tr').find('th').length) {
+                        $(this).closest('tr').addClass('selected-tr');
+                    }
+                } else {
+                    $(this).closest('tr').removeClass('selected-tr');
+                }
+            });
+
+
+            //starts- whenever we hover over ellipsis class, we show tooltip with full text
+            $('.ellipsis').hover(function() {
+                // On mouse enter
+
+                var fullText = $(this).data('full-text');
+                console.log("fullText", fullText);
+                if ($(this).text() !== fullText) {
+                    if (fullText) {
+                        // Remove any existing tooltip
+                        $(this).find('.ellipsis-tooltip').remove();
+                        // Append a new tooltip
+                        $(this).append('<div class="ellipsis-tooltip">' + fullText + '</div>');
+                    }
+                }
+            }, function() {
+                // On mouse leave
+                $(this).find('.ellipsis-tooltip').remove();
+            });
+            //starts- whenever we hover over ellipsis class, we show tooltip with full text
+
+
+            //starts - set-style-on-hover on tr
+            $('.cms-table tbody tr').hover(function() {
+                // On mouse enter
+                $(this).addClass('set-style-on-hover');
+                $(this).find('.tbl-action-btn').removeClass('d-none');
+            }, function() {
+
+                // On mouse leave
+                $(this).removeClass('set-style-on-hover');
+                $(this).find('.tbl-action-btn').addClass('d-none');
+            });
+            //starts - set-style-on-hover on tr
+
+
+
+            //   Save the full text initially
             $('.ellipsis').each(function() {
                 var fullText = $(this).text();
                 $(this).data('full-text', fullText);
@@ -357,42 +469,7 @@
             // Apply ellipsis on page load
             applyEllipsis();
 
-            // Apply ellipsis on window resize
-            // $(window).resize(function() {
-            //     applyEllipsis();
-            // });
 
-            //ends - ellipsis functionality
-
-
-
-            //starts - select multiple checkbox functionality
-            $('#main-checkbox').click(function() {
-                if ($(this).is(':checked')) {
-                    $('.form-check-input').prop('checked', true);
-                } else {
-                    $('.form-check-input').prop('checked', false);
-                }
-            });
-            //ends - select multiple checkbox functionality
-            
-            //whenever we hover over ellipsis class, we show tooltip with full text
-            $('.ellipsis').hover(function() {
-                // On mouse enter
-
-                var fullText = $(this).data('full-text');
-                if($(this).text()!==fullText){
-                if (fullText) {
-                    // Remove any existing tooltip
-                    $(this).find('.ellipsis-tooltip').remove();
-                    // Append a new tooltip
-                    $(this).append('<div class="ellipsis-tooltip">' + fullText + '</div>');
-                }
-            }
-            }, function() {
-                // On mouse leave
-                $(this).find('.ellipsis-tooltip').remove();
-            });
         });
     </script>
 </body>
