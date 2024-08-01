@@ -67,6 +67,21 @@
                                         <div class="card-body">
 
                                             <!-- <h4 class="card-title"><b>Table Lists</b></h4> -->
+
+
+                                            <!-- //select all table Action edit, delete, copy -->
+                                           
+                                                        
+                                                           
+                                                            <div class="tbl-header-action-btn">
+                                                                <a href="#"><i class="ti-pencil-alt "></i></a>
+                                                                <a href="#"><i class="ti-trash"></i></a>
+                                                                <a href="#"><i class="ti-files"></i></a>
+                                                            </div>
+                                         
+                                                   
+                                                
+
                                             <!-- Cms Table section -->
                                             <table class="cms-table zebra-stripe">
                                                 <thead>
