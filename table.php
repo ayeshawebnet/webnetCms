@@ -68,12 +68,12 @@
 
                                             <h4 class="card-title"><b>Table Lists</b></h4>
                                             <!-- Cms Table section -->
-                                            <table  class="cms-table">
+                                            <table class="cms-table">
                                                 <thead>
                                                     <tr>
-                                                        <th class="check">
-                                                            <div class="form-check ">
-                                                                <input class="form-check-input" type="checkbox" id="formCheck1">
+                                                        <th>
+                                                            <div class="tbl-checkbox-container">
+                                                                <input class="form-check-input" type="checkbox" id="main-checkbox">
                                                             </div>
                                                         </th>
                                                         <th>Name</th>
@@ -85,12 +85,11 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <div class="form-check
-                ">
-                                                                <input class="form-check-input" type="checkbox" id="formCheck2">
+                                                            <div class="tbl-checkbox-container">
+                                                                <input class="form-check-input" type="checkbox" id="checkbox1">
                                                             </div>
                                                         </td>
-                                                        <td>Website Packages</td>
+                                                        <td class="ellipsis">Website Packages</td>
                                                         <td>-</td>
                                                         <td>2022-01-25 17:36:35</td>
                                                         <td>
@@ -100,14 +99,16 @@
                                                                 <a href="#"><i class="ti-files bg-c91974"></i></a>
                                                             </div>
                                                         </td>
+                                                        <div>ere</div>
                                                     </tr>
+
                                                     <tr>
                                                         <td>
-                                                            <div class="form-check ">
-                                                                <input class="form-check-input" type="checkbox" id="formCheck3">
+                                                            <div class="tbl-checkbox-container">
+                                                                <input class="form-check-input" type="checkbox" id="checkbox2">
                                                             </div>
                                                         </td>
-                                                        <td>Free Ecommerce Website Deliverables</td>
+                                                        <td class="ellipsis">Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
                                                         <td>2021-09-15 12:08:34</td>
                                                         <td>
@@ -120,6 +121,8 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+
+
                                             <!-- <table id="datatable" class="cms-table table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                                 <thead>
@@ -172,7 +175,7 @@
                                                         </td>
                                                     </tr> -->
 
-                                                    <!--<tr>
+                                            <!--<tr>
                                                     <td>
                                                         <div class="form-check mb-3">
                                                             <input class="form-check-input" type="checkbox" id="formCheck4">
@@ -268,7 +271,7 @@
                                                     <td>2008/12/13</td>
                                                     <td>$103,600</td>
                                                 </tr> -->
-                                                <!-- </tbody>
+                                            <!-- </tbody>
                                             </table> -->
 
                                         </div>
@@ -330,6 +333,68 @@
     <!-- <script src="assets/js/pages/morris.init.js"></script> -->
     <script src="assets/js/main.js"></script>
 
+    <script>
+        //starts - ellipsis functionality 
+        $(document).ready(function() {
+            function applyEllipsis() {
+                console.log("this1", $(this));
+                //ellipses for width less than 786px
+                if ($(window).width() <= 786) {
+                    $('.ellipsis').each(function() {
+                        var text = $(this).text();
+                        var truncatedText = text.split("").slice(0, 12).join("") + '...';
+                        $(this).text(truncatedText);
+                    });
+                }
+            }
+
+            // Save the full text initially
+            $('.ellipsis').each(function() {
+                var fullText = $(this).text();
+                $(this).data('full-text', fullText);
+            });
+
+            // Apply ellipsis on page load
+            applyEllipsis();
+
+            // Apply ellipsis on window resize
+            // $(window).resize(function() {
+            //     applyEllipsis();
+            // });
+
+            //ends - ellipsis functionality
+
+
+
+            //starts - select multiple checkbox functionality
+            $('#main-checkbox').click(function() {
+                if ($(this).is(':checked')) {
+                    $('.form-check-input').prop('checked', true);
+                } else {
+                    $('.form-check-input').prop('checked', false);
+                }
+            });
+            //ends - select multiple checkbox functionality
+            
+            //whenever we hover over ellipsis class, we show tooltip with full text
+            $('.ellipsis').hover(function() {
+                // On mouse enter
+
+                var fullText = $(this).data('full-text');
+                if($(this).text()!==fullText){
+                if (fullText) {
+                    // Remove any existing tooltip
+                    $(this).find('.ellipsis-tooltip').remove();
+                    // Append a new tooltip
+                    $(this).append('<div class="ellipsis-tooltip">' + fullText + '</div>');
+                }
+            }
+            }, function() {
+                // On mouse leave
+                $(this).find('.ellipsis-tooltip').remove();
+            });
+        });
+    </script>
 </body>
 
 </html>
