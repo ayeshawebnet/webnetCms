@@ -893,7 +893,9 @@ nav.open + .hamburger .hamburger-inner:after {
   border-bottom: 1px solid rgb(201, 201, 201) !important;
   height: 50px;
 }
-
+.cms-table th i{
+  margin-left: 4px;
+}
 .tbl-checkbox-container {
   width: 60px;
 }

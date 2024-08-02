@@ -86,7 +86,7 @@
                                             </div>
 
                                             <!-- Cms Table section -->
-                                            <table class="cms-table zebra-stripe">
+                                            <table id='cmsdatatable' class="cms-table zebra-stripe ">
                                                 <thead>
                                                     <tr>
                                                         <!-- <th class="tbl-checkbox-container">
@@ -94,11 +94,23 @@
                                                                 <input class="form-check-input" type="checkbox" id="main-checkbox">
                                                             </div>
                                                         </th> -->
-                                                        <th class="text-center"></th>
-                                                        <th>Name</th>
-                                                        <th>Name</th>
-                                                        <th>Unit</th>
-                                                        <th class="text-center">Created At</th>
+                                                        <th class="text-center" ></th>
+                                                        <th data-sort="0">
+                                                            <span>Name</span>
+                                                            <span><i class="ti-split-v"></i></span>
+                                                        </th>
+                                                        <th data-sort="1">
+                                                            <span>Name</span>
+                                                            <span><i class="ti-split-v"></i></span>
+                                                        </th>
+                                                        <th data-sort="2">
+                                                            <span>Unit</span>
+                                                            <span><i class="ti-split-v"></i></span>
+                                                        </th>
+                                                        <th class="text-center" data-sort="4">
+                                                            <span>Created At</span>
+                                                            <span><i class="ti-split-v"></i></span>
+                                                        </th>
                                                         <th></th>
                                                     </tr>
                                                 </thead>
@@ -130,7 +142,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="ellipsis">Website Packages</td>
-                                                        <td>Website Packages</td>
+                                                        <td>Ayesha</td>
                                                         <td>-</td>
                                                         <td class="text-center">2022-01-25 17:36:35</td>
                                                         <td class="action-container-size">
@@ -168,7 +180,7 @@
                                                                 <input class="form-check-input" type="checkbox" id="checkbox1">
                                                             </div>
                                                         </td>
-                                                        <td class="ellipsis">Website Packages</td>
+                                                        <td class="ellipsis">Ayesha</td>
                                                         <td>Website Packages</td>
                                                         <td>-</td>
                                                         <td class="text-center">2022-01-25 17:36:35</td>
@@ -221,6 +233,7 @@
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyCtSAR45TFgZjOs4nBFFZnII-6mMHLfSYI"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
     <!-- Responsive examples -->
@@ -332,13 +345,46 @@
                     $('.cms-table tbody tr:nth-child(odd)').removeClass("zebrastripe");
                 }
             }
-            $("#tbl-search-input").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $(".cms-table tbody tr").filter(function() {
-            var rowText = $(this).text().toLowerCase();
-            $(this).toggle(rowText.indexOf(value) > -1);
-        });
-    });
+
+
+            // search functionality
+            $(".tbl-search-input").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                
+                $(".cms-table tbody tr").filter(function() {
+                    var rowText = $(this).text().toLowerCase();
+                    $(this).toggle(rowText.indexOf(value) > -1);
+
+                });
+                // addZebraStripes()
+            });
+
+            // Sorting functionality
+            $(".cms-table th").on("click", function() {
+                var table = $(this).parents("table").eq(0);
+                var rows = table.find("tbody tr").toArray().sort(compare($(this).index()));
+                this.asc = !this.asc;
+                if (!this.asc) {
+                    // addZebraStripes();
+                    rows = rows.reverse();
+                    
+                }
+                table.children("tbody").empty().html(rows);
+                // addZebraStripes();
+            });
+
+            function compare(index) {
+                return function(a, b) {
+                    var valA = getCellValue(a, index);
+                    var valB = getCellValue(b, index);
+                    return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.localeCompare(valB);
+                };
+            }
+
+            function getCellValue(row, index) {
+                return $(row).children("td").eq(index).text();
+            }
+
 
             //   Save the full text initially
             $('.ellipsis').each(function() {
@@ -347,7 +393,7 @@
             });
             // Apply ellipsis on page load
             applyEllipsis();
-            addZebraStripes();
+            // addZebraStripes();
 
         });
     </script>
