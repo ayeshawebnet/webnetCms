@@ -398,12 +398,12 @@ body[data-sidebar="dark"] .navbar-brand-box {
   }
 }
 @media (min-width: 1200px) and (max-width: 1640px) {
- .dashboard-header-card .col-xl-3 {
+  .dashboard-header-card .col-xl-3 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 50%;
-}
+  }
 }
 .mini-stat-radius {
   border-radius: 40px 4px 4px 4px;
@@ -629,23 +629,6 @@ body[data-sidebar="dark"] .mm-active > a {
   background-color: #fff !important;
   color: #000;
 }
-.Edit-btn-1 {
-  display: flex;
-  align-items: center;
-}
-.Edit-btn-1 a {
-}
-.Edit-btn-1 a i {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  font-size: 14px;
-  justify-content: center;
-  color: #fff;
-  border-radius: 4px;
-  align-items: center;
-  margin-right: 10px;
-}
 
 /* End css By Hammad */
 
@@ -866,7 +849,14 @@ nav.open + .hamburger .hamburger-inner:after {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #fc4a4a, #ffff67, #71f371, #6868fc, #fc55fc);
+  background: linear-gradient(
+    to right,
+    #fc4a4a,
+    #ffff67,
+    #71f371,
+    #6868fc,
+    #fc55fc
+  );
 }
 
 .world-map-tbl td {
@@ -877,19 +867,95 @@ nav.open + .hamburger .hamburger-inner:after {
 .view-all {
   text-align: right;
   padding: 25px 10px 0px 10px;
-
 }
 
 .map-table {
   padding-bottom: 0px;
 }
-.geo-mt{
+.geo-mt {
   display: flex;
   justify-content: space-between;
 }
-.geo-mt .geo-map-table{
+.geo-mt .geo-map-table {
   flex: 0 0 48%;
 }
-.geo-mt .geo-map{
+.geo-mt .geo-map {
   flex: 0 0 48%;
 }
+
+/* Cms Table section */
+.cms-table {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+.cms-table,
+.cms-table th,
+.cms-table td {
+  border-bottom: 1px solid rgb(201, 201, 201) !important;
+  height: 50px;
+}
+
+.tbl-checkbox-container {
+  width: 60px;
+}
+
+.ellipsis-tooltip {
+  position: absolute;
+  background-color: #333;
+  opacity: 0.6;
+  color: #ececec;
+  padding: 3px 5px;
+  border-radius: 5px;
+  z-index: 1000;
+  white-space: nowrap;
+  left: 9%;
+  margin-top: 6px;
+  font-size: smaller;
+}
+
+.set-style-on-hover {
+  /*on hover table row*/
+  /* border: 1px solid #c9c9c9;
+  /* box-shadow: 2px 3px 3px  rgba(0, 0, 0, 0.1) !important; */
+  cursor: pointer;
+  /* width: 30px;
+  height: 30px; */
+}
+
+.selected-tr {
+  background-color: #ededed !important;
+}
+
+.zebrastripe {
+  background-color: #f7f7f7;
+}
+
+/* for single and multiple delete */
+.action-container-size {
+  width: 180px;
+  height: 30px;
+}
+.head-action-cont {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.tbl-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.action-icon {
+  color: #5b626b;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.action-icon:hover {
+  color: #5b626b;
+  background-color: #e5e5e5;
+}
+/* for multiple delete */
