@@ -889,8 +889,7 @@ nav.open + .hamburger .hamburger-inner:after {
   width: 100%;
 }
 .cms-table,
-.cms-table th,
-.cms-table td {
+.cms-table tr {
   border-bottom: 1px solid rgb(201, 201, 201) !important;
   height: 50px;
 }
@@ -915,9 +914,11 @@ nav.open + .hamburger .hamburger-inner:after {
 
 .set-style-on-hover {
   /*on hover table row*/
-  /* border: 1px solid #c9c9c9;
-  /* box-shadow: 2px 3px 3px  rgba(0, 0, 0, 0.1) !important; */
+  border: 1px solid #c9c9c9;
+  box-shadow: 2px 3px 3px  rgba(0, 0, 0, 0.1) !important; 
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   /* width: 30px;
   height: 30px; */
 }
@@ -936,6 +937,7 @@ nav.open + .hamburger .hamburger-inner:after {
   height: 30px;
 }
 .head-action-cont {
+  height: 30px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -946,7 +948,8 @@ nav.open + .hamburger .hamburger-inner:after {
   justify-content: space-around;
 }
 .action-icon {
-  color: #5b626b;
+  /* color: #5b626b; */
+  color: #a3a3a3;
   width: 30px;
   height: 30px;
   border-radius: 50%;
