@@ -65,32 +65,26 @@
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-
-                                            <!-- <h4 class="card-title"><b>Table Lists</b></h4> -->
-
-
-                                            <!-- //select all table Action edit, delete, copy -->
-                                           
-                                                        
-                                                           
-                                                            <div class="tbl-header-action-btn">
-                                                                <a href="#"><i class="ti-pencil-alt "></i></a>
-                                                                <a href="#"><i class="ti-trash"></i></a>
-                                                                <a href="#"><i class="ti-files"></i></a>
-                                                            </div>
-                                         
-                                                   
-                                                
-
+                                            <div class="head-action-cont ">
+                                                <div class="text-center tbl-checkbox-container">
+                                                    <input class="form-check-input" type="checkbox" id="main-checkbox">
+                                                </div>
+                                                <div  class="tbl-action-btn action-container-size">
+                                                    <a href="#" class="action-icon"><i class="ti-pencil-alt "></i></a>
+                                                    <a href="#" class="action-icon"><i class="ti-trash"></i></a>
+                                                    <a href="#" class="action-icon"><i class="ti-files"></i></a>
+                                                </div>
+                                            </div>
                                             <!-- Cms Table section -->
                                             <table class="cms-table zebra-stripe">
                                                 <thead>
                                                     <tr>
-                                                        <th>
-                                                            <div class="tbl-checkbox-container">
+                                                        <!-- <th class="tbl-checkbox-container">
+                                                            <div class="text-center">
                                                                 <input class="form-check-input" type="checkbox" id="main-checkbox">
                                                             </div>
-                                                        </th>
+                                                        </th> -->
+                                                        <th class="text-center">#</th>
                                                         <th>Name</th>
                                                         <th>Name</th>
                                                         <th>Unit</th>
@@ -101,8 +95,8 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td>
-                                                            <div class="tbl-checkbox-container">
+                                                        <td class="tbl-checkbox-container">
+                                                            <div class="text-center">
                                                                 <input class="form-check-input" type="checkbox" id="checkbox1">
                                                             </div>
                                                         </td>
@@ -110,17 +104,35 @@
                                                         <td>Website Packages</td>
                                                         <td>-</td>
                                                         <td class="text-center">2022-01-25 17:36:35</td>
-                                                        <td class="tbl-action-col">
+                                                        <td class="action-container-size">
                                                             <div class="tbl-action-btn d-none">
-                                                                <a href="#"><i class="ti-pencil-alt "></i></a>
-                                                                <a href="#"><i class="ti-trash "></i></a>
-                                                                <a href="#"><i class="ti-files "></i></a>
+                                                                <a href="#" class="action-icon"><i class="ti-pencil-alt "></i></a>
+                                                                <a href="#" class="action-icon"><i class="ti-trash "></i></a>
+                                                                <a href="#" class="action-icon"><i class="ti-files "></i></a>
                                                             </div>
                                                         </td>
 
                                                     </tr>
-
                                                     <tr>
+                                                        <td class="tbl-checkbox-container">
+                                                            <div class="text-center">
+                                                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                                            </div>
+                                                        </td>
+                                                        <td class="ellipsis">Website Packages</td>
+                                                        <td>Website Packages</td>
+                                                        <td>-</td>
+                                                        <td class="text-center">2022-01-25 17:36:35</td>
+                                                        <td class="action-container-size">
+                                                            <div class="tbl-action-btn d-none">
+                                                                <a href="#" class="action-icon"><i class="ti-pencil-alt "></i></a>
+                                                                <a href="#" class="action-icon"><i class="ti-trash "></i></a>
+                                                                <a href="#" class="action-icon"><i class="ti-files "></i></a>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <!-- <tr>
                                                         <td>
                                                             <div class="tbl-checkbox-container">
                                                                 <input class="form-check-input" type="checkbox" id="checkbox2">
@@ -130,8 +142,8 @@
                                                         <td>Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
                                                         <td class="text-center">2021-09-15 12:08:34</td>
-                                                        <td class="tbl-action-col">
-                                                            <div class="tbl-action-btn">
+                                                        <td class="action-container-size">
+                                                            <div class="tbl-action-btn d-none">
                                                                 <a href="#"><i class="ti-pencil-alt bg-none"></i></a>
                                                                 <a href="#"><i class="ti-trash "></i></a>
                                                                 <a href="#"><i class="ti-files "></i></a>
@@ -149,8 +161,8 @@
                                                         <td>Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
                                                         <td class="text-center">2021-09-15 12:08:34</td>
-                                                        <td class="tbl-action-col">
-                                                            <div class="tbl-action-btn">
+                                                        <td class="action-container-size">
+                                                            <div class="tbl-action-btn d-none">
                                                                 <a href="#"><i class="ti-pencil-alt bg-none"></i></a>
                                                                 <a href="#"><i class="ti-trash "></i></a>
                                                                 <a href="#"><i class="ti-files "></i></a>
@@ -168,14 +180,14 @@
                                                         <td>Free Ecommerce Website Deliverables Free Ecommerce Website Deliverables</td>
                                                         <td>-</td>
                                                         <td class="text-center">2021-09-15 12:08:34</td>
-                                                        <td class="tbl-action-col">
-                                                            <div class="tbl-action-btn">
+                                                        <td class="action-container-size">
+                                                            <div class="tbl-action-btn d-none">
                                                                 <a href="#"><i class="ti-pencil-alt bg-none"></i></a>
                                                                 <a href="#"><i class="ti-trash "></i></a>
                                                                 <a href="#"><i class="ti-files "></i></a>
                                                             </div>
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                 </tbody>
                                             </table>
 
@@ -422,17 +434,18 @@
 
             //starts - add bg color on single checkbox checked
             $('tbody .form-check-input').click(function() {
-                // if all checkboxes lies under in tbody are checked, then check thead checkbox
-                // if ($('.form-check-input:checked').length === $('.form-check-input').length-1) {
-                //     $('#main-checkbox').prop('checked', true);
-                // } else {
-                //     $('#main-checkbox').prop('checked', false);
-                // }
+                
+                var totalCheckbox = $('.cms-table tbody tr').length;
+                var checkedCheckbox = $('.cms-table tbody tr .form-check-input:checked').length;
+                if (totalCheckbox === checkedCheckbox) {
+                    $('#main-checkbox').prop('checked', true);
+                } else {
+                    $('#main-checkbox').prop('checked', false);
+                }
 
-                if ($(this).is(':checked')) {
-                    if (!$(this).closest('tr').find('th').length) { //if not header checkbox
-                        $(this).closest('tr').addClass('selected-tr');
-                    }
+                
+                if ($(this).is(':checked')) {    
+                        $(this).closest('tr').addClass('selected-tr');    
                 } else {
                     $(this).closest('tr').removeClass('selected-tr');
                 }
@@ -474,17 +487,16 @@
             //starts - set-style-on-hover on tr
 
 
-           
+
             function addZebraStripes() {
-                
+
                 if ($('.cms-table').hasClass('zebra-stripe')) {
                     $('.cms-table tbody tr:nth-child(odd)').addClass("zebrastripe");
-                }
-                else{
+                } else {
                     $('.cms-table tbody tr:nth-child(odd)').removeClass("zebrastripe");
                 }
             }
-        
+
 
             //   Save the full text initially
             $('.ellipsis').each(function() {
@@ -492,7 +504,7 @@
                 $(this).data('full-text', fullText);
             });
 
-            
+
             // Apply ellipsis on page load
             applyEllipsis();
             addZebraStripes();

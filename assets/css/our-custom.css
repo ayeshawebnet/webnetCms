@@ -630,8 +630,6 @@ body[data-sidebar="dark"] .mm-active > a {
   color: #000;
 }
 
-
-
 /* End css By Hammad */
 
 /* Add CSS by Ayesha */
@@ -894,14 +892,11 @@ nav.open + .hamburger .hamburger-inner:after {
 .cms-table th,
 .cms-table td {
   border-bottom: 1px solid rgb(201, 201, 201) !important;
-  padding: 15px;
-
+  height: 50px;
 }
 
 .tbl-checkbox-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 60px;
 }
 
 .ellipsis-tooltip {
@@ -909,7 +904,7 @@ nav.open + .hamburger .hamburger-inner:after {
   background-color: #333;
   opacity: 0.6;
   color: #ececec;
-  padding:3px 5px;
+  padding: 3px 5px;
   border-radius: 5px;
   z-index: 1000;
   white-space: nowrap;
@@ -918,52 +913,49 @@ nav.open + .hamburger .hamburger-inner:after {
   font-size: smaller;
 }
 
-.set-style-on-hover{
-  /* background-color: #dedede; */
-  border: 1px solid #c9c9c9;
-  box-shadow: 2px 3px 3px  rgba(0, 0, 0, 0.1);
+.set-style-on-hover {
+  /*on hover table row*/
+  /* border: 1px solid #c9c9c9;
+  /* box-shadow: 2px 3px 3px  rgba(0, 0, 0, 0.1) !important; */
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  /* width: 30px;
+  height: 30px; */
 }
-.tbl-action-btn{
-  display: flex ;
-  justify-content: space-around;
 
-}
-.tbl-action-col{ 
-  width: 180px;
-}
-/* .Edit-btn-1 {
-  display: flex;
-  align-items: center;
-}
-.Edit-btn-1 a {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  font-size: 14px;
-  justify-content: center;
-  color: #fff;
-  border-radius: 4px;
-  align-items: center;
-  margin-right: 10px;
-} */
-
-.tbl-action-col a i {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  font-size: 14px;
-  justify-content: center;
-  color: #5b626b;
-  border-radius: 4px;
-  align-items: center;
-}
-.selected-tr{
+.selected-tr {
   background-color: #ededed !important;
 }
 
-.zebrastripe { 
-  background-color: #f7f7f7; 
-} 
+.zebrastripe {
+  background-color: #f7f7f7;
+}
+
+/* for single and multiple delete */
+.action-container-size {
+  width: 180px;
+  height: 30px;
+}
+.head-action-cont {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.tbl-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.action-icon {
+  color: #5b626b;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.action-icon:hover {
+  color: #5b626b;
+  background-color: #e5e5e5;
+}
+/* for multiple delete */
