@@ -65,16 +65,26 @@
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <div class="head-action-cont">
-                                                <div class="text-center tbl-checkbox-container">
-                                                    <input class="form-check-input" type="checkbox" id="main-checkbox">
+                                            <div class="d-flex">
+                                                <div class="head-action-cont">
+
+                                                    <div class="text-center tbl-checkbox-container">
+                                                        <input class="form-check-input" type="checkbox" id="main-checkbox">
+                                                    </div>
+                                                    <div class="tbl-action-btn action-container-size header-btn d-none">
+                                                        <a href="#" class="action-icon"><i class="ti-pencil-alt "></i></a>
+                                                        <a href="#" class="action-icon"><i class="ti-trash"></i></a>
+                                                        <a href="#" class="action-icon"><i class="ti-files"></i></a>
+                                                    </div>
                                                 </div>
-                                                <div class="tbl-action-btn action-container-size header-btn d-none">
-                                                    <a href="#" class="action-icon"><i class="ti-pencil-alt "></i></a>
-                                                    <a href="#" class="action-icon"><i class="ti-trash"></i></a>
-                                                    <a href="#" class="action-icon"><i class="ti-files"></i></a>
+                                                <div class="cms-tbl-header">
+                                                    <form id="tbl-content">
+                                                        <input type="search" name="search" class="tbl-search-input" placeholder="Search...">
+                                                    </form>
+
                                                 </div>
                                             </div>
+
                                             <!-- Cms Table section -->
                                             <table class="cms-table zebra-stripe">
                                                 <thead>
@@ -176,156 +186,7 @@
                                             </table>
 
 
-                                            <!-- <table id="datatable" class="cms-table table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
-                                                <thead>
-                                                    <tr>
-                                                        <th class="check">
-                                                            <div class="form-check mb-3">
-                                                                <input class="form-check-input" type="checkbox" id="formCheck1">
-                                                            </div>
-                                                        </th>
-                                                        <th>Name</th>
-                                                        <th>Unit</th>
-                                                        <th>Created At</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check mb-3">
-                                                                <input class="form-check-input" type="checkbox" id="formCheck2">
-                                                            </div>
-                                                        </td>
-                                                        <td>Website Packages</td>
-                                                        <td>-</td>
-                                                        <td>2022-01-25 17:36:35</td>
-                                                        <td>
-                                                            <div class="Edit-btn-1">
-                                                                <a href="#"><i class="ti-pencil-alt bg-902889"></i></a>
-                                                                <a href="#"><i class="ti-trash bg-f5a31d"></i></a>
-                                                                <a href="#"><i class="ti-files bg-c91974"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check mb-3">
-                                                                <input class="form-check-input" type="checkbox" id="formCheck3">
-                                                            </div>
-                                                        </td>
-                                                        <td>Free Ecommerce Website Deliverables</td>
-                                                        <td>-</td>
-                                                        <td>2021-09-15 12:08:34</td>
-                                                        <td>
-                                                            <div class="Edit-btn-1">
-                                                                <a href="#"><i class="ti-pencil-alt bg-902889"></i></a>
-                                                                <a href="#"><i class="ti-trash bg-f5a31d"></i></a>
-                                                                <a href="#"><i class="ti-files bg-c91974"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr> -->
-
-                                            <!--<tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck4">
-                                                        </div>
-                                                    </td>
-                                                    <td>Junior Technical Author</td>
-                                                    <td>San Francisco</td>
-                                                    <td>66</td>
-                                                    <td>2009/01/12</td>
-                                                    <td>$86,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck5">
-                                                        </div>
-                                                    </td>
-                                                    <td>Senior Javascript Developer</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>22</td>
-                                                    <td>2012/03/29</td>
-                                                    <td>$433,060</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck6">
-                                                        </div>
-                                                    </td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>33</td>
-                                                    <td>2008/11/28</td>
-                                                    <td>$162,700</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck7">
-                                                        </div>
-                                                    </td>
-                                                    <td>Integration Specialist</td>
-                                                    <td>New York</td>
-                                                    <td>61</td>
-                                                    <td>2012/12/02</td>
-                                                    <td>$372,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck8">
-                                                        </div>
-                                                    </td>
-                                                    <td>Sales Assistant</td>
-                                                    <td>San Francisco</td>
-                                                    <td>59</td>
-                                                    <td>2012/08/06</td>
-                                                    <td>$137,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck9">
-                                                        </div>
-                                                    </td>
-                                                    <td>Integration Specialist</td>
-                                                    <td>Tokyo</td>
-                                                    <td>55</td>
-                                                    <td>2010/10/14</td>
-                                                    <td>$327,900</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck10">
-                                                        </div>
-                                                    </td>
-                                                    <td>Javascript Developer</td>
-                                                    <td>San Francisco</td>
-                                                    <td>39</td>
-                                                    <td>2009/09/15</td>
-                                                    <td>$205,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck11">
-                                                        </div>
-                                                    </td>
-                                                    <td>Software Engineer</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>23</td>
-                                                    <td>2008/12/13</td>
-                                                    <td>$103,600</td>
-                                                </tr> -->
-                                            <!-- </tbody>
-                                            </table> -->
 
                                         </div>
                                     </div>
@@ -360,11 +221,6 @@
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyCtSAR45TFgZjOs4nBFFZnII-6mMHLfSYI"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    <!-- <script src="assets/js/ajax.js"></script> -->
-    <!--Morris Chart-->
-    <!-- <script src="assets/libs/morris.js/morris.min.js"></script>
-	<script src="assets/libs/raphael/raphael.min.js"></script> -->
-    <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
     <!-- Responsive examples -->
@@ -374,16 +230,7 @@
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js"></script>
     <!--Morris Chart-->
-    <!-- <script src="assets/libs/morris.js/morris.min.js"></script>
-	<script src="assets/libs/raphael/raphael.min.js"></script>
-	<script src="assets/js/pages/dashboard.init.js"></script>
-	<script src="assets/libs/jquery-knob/jquery.knob.min.js"></script>
-	<script src="assets/js/pages/jquery-knob.init.js"></script> -->
-    <!--Morris Chart-->
-    <!-- <script src="assets/libs/morris.js/morris.min.js"></script>
-	<script src="assets/libs/raphael/raphael.min.js"></script> -->
-    <!-- Init js -->
-    <!-- <script src="assets/js/pages/morris.init.js"></script> -->
+
     <script src="assets/js/main.js"></script>
 
     <script>
@@ -485,15 +332,19 @@
                     $('.cms-table tbody tr:nth-child(odd)').removeClass("zebrastripe");
                 }
             }
-
+            $("#tbl-search-input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".cms-table tbody tr").filter(function() {
+            var rowText = $(this).text().toLowerCase();
+            $(this).toggle(rowText.indexOf(value) > -1);
+        });
+    });
 
             //   Save the full text initially
             $('.ellipsis').each(function() {
                 var fullText = $(this).text();
                 $(this).data('full-text', fullText);
             });
-
-
             // Apply ellipsis on page load
             applyEllipsis();
             addZebraStripes();

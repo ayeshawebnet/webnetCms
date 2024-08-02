@@ -962,3 +962,25 @@ nav.open + .hamburger .hamburger-inner:after {
   background-color: #e5e5e5;
 }
 /* for multiple delete */
+
+
+#tbl-content {
+  position: relative;
+  width: 100%;
+}
+
+.tbl-search-input {
+  box-sizing: border-box;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.tbl-search-input:focus {
+  border-color: #999;
+}
