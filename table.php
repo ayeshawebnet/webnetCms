@@ -94,7 +94,7 @@
                                                                 <input class="form-check-input" type="checkbox" id="main-checkbox">
                                                             </div>
                                                         </th> -->
-                                                        <th class="text-center" ></th>
+                                                        <th class="text-center"></th>
                                                         <th data-sort="0">
                                                             <span>Name</span>
                                                             <span><i class="ti-split-v"></i></span>
@@ -196,10 +196,6 @@
 
                                                 </tbody>
                                             </table>
-
-
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -248,6 +244,7 @@
 
     <script>
         $(document).ready(function() {
+
             //starts - ellipsis functionality 
             function applyEllipsis() {
                 var fullText = $(this).text();
@@ -341,22 +338,23 @@
             function addZebraStripes() {
                 if ($('.cms-table').hasClass('zebra-stripe')) {
                     $('.cms-table tbody tr:nth-child(odd)').addClass("zebrastripe");
+                    $('.cms-table tbody tr:nth-child(even)').removeClass("zebrastripe");
                 } else {
                     $('.cms-table tbody tr:nth-child(odd)').removeClass("zebrastripe");
+                    $('.cms-table tbody tr:nth-child(even)').removeClass("zebrastripe");
                 }
             }
-
 
             // search functionality
             $(".tbl-search-input").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
-                
+
                 $(".cms-table tbody tr").filter(function() {
                     var rowText = $(this).text().toLowerCase();
                     $(this).toggle(rowText.indexOf(value) > -1);
 
                 });
-                // addZebraStripes()
+                addZebraStripes()
             });
 
             // Sorting functionality
@@ -367,10 +365,10 @@
                 if (!this.asc) {
                     // addZebraStripes();
                     rows = rows.reverse();
-                    
+
                 }
                 table.children("tbody").empty().html(rows);
-                // addZebraStripes();
+                addZebraStripes();
             });
 
             function compare(index) {
@@ -393,8 +391,7 @@
             });
             // Apply ellipsis on page load
             applyEllipsis();
-            // addZebraStripes();
-
+            addZebraStripes();     
         });
     </script>
 </body>
