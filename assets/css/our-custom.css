@@ -74,6 +74,7 @@
 }
 
 body {
+  font-family:Helvetica, sans-serif !important;
   background-color: #dfd8d8;
   margin: 20px;
   margin-bottom: 0;
